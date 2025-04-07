@@ -1,0 +1,21 @@
+name: Explorando-GitHub-Actions
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  explorar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Paso 1 - Verificar código
+        uses: actions/checkout@v3
+
+      - name: Paso 2 - Mostrar mensaje
+        run: echo "ACTIVIDAD 11 DE OPERACIONES Y DESARROLLO"
+
+      - name: Paso 3 - Listar archivos
+        run: ls -la
